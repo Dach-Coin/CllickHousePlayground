@@ -1,5 +1,5 @@
 #/bin/bash
 
-export CLICKHOUSE__CONNECTIONSTRING="Host=$CH_HOST;Port=$CH_PORT;Username=default;password=;Database=v8logs;"
+export CLICKHOUSE__CONNECTIONSTRING="Host=$CH_HOST;Port=$CH_PORT;Username=default;password=;"
 echo Clickhouse Connection = $CH_HOST:$CH_PORT
-dotnet /opt/EventLogExporter/EventLogExporter.dll --ClickHouse:ConnectionString=$CLICKHOUSE__CONNECTIONSTRING
+dotnet /opt/EventLogExporter/EventLogExportersManager.dll --ClickHouse:ConnectionString=$CLICKHOUSE__CONNECTIONSTRING

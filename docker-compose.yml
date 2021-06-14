@@ -18,15 +18,15 @@ services:
     depends_on:
         - clickhouse
     ports:
-      - "8080:80"
+      - "8085:80"
   collector:
     build: ./log-exporter
     image: v8logexporter
     environment:
       CH_HOST: clickhouse
       CH_PORT: 8123
-    volumes: 
-      - "D:/1CDB/unf_demo/1Cv8Log:/var/logdata"
+    volumes:
+      - "D:/1C_srvinfo/8.3.18.1289/reg_2541:/var/logdata"
     depends_on:
       - clickhouse
 volumes:
