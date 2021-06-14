@@ -54,3 +54,5 @@
 - В `docker-compose.yml` указать свой путь к каталогу кластера 1С (`collector-volumes`)
 
 - Выполнить `docker compose up -d`
+
+- Подключиться к консоли `Tabix`: http://localhost:8085
