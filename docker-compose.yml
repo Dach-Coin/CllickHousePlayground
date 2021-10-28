@@ -10,6 +10,7 @@ services:
       - "8123:8123"
     volumes:
       - "clickhouse-data:/var/lib/clickhouse"
+    restart: always
   click-ui:
     image: spoonest/clickhouse-tabix-web-client
     environment: 
@@ -19,6 +20,7 @@ services:
         - clickhouse
     ports:
       - "8085:80"
+    restart: always
   collector:
     build: ./log-exporter
     image: v8logexporter
@@ -29,5 +31,6 @@ services:
       - "D:/1C_srvinfo/8.3.18.1289/reg_2541:/var/logdata"
     depends_on:
       - clickhouse
+    restart: always
 volumes:
   clickhouse-data:
