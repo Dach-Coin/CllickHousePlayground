@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  collector2:
+    build: ./log-exporter
+    image: v8logexporter
+    environment:
+      CH_HOST: clickhouse
+      CH_PORT: 8123
+    volumes:
+      - "D:/1C_srvinfo/8.3.18.1433/reg_1541:/var/logdata"
+    depends_on:
+      - clickhouse
